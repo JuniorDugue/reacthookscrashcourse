@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
-
+import Todo from "./components/Todo";
 import "./styles.css";
 
 function App() {
@@ -10,12 +10,22 @@ function App() {
       text: "Learn Hooks",
       isCompleted: false,
     },
+    {
+      text: "Catch up in React",
+      isCompleted: false,
+    },
+    {
+      text: "Ace the sprint challenge this weekend!",
+      isCompleted: false,
+    },
   ])
   
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>ToDo List</h1>
+      {todos.map((todo, index)=> {
+        <Todo key={index} index={index} todo={todo} />
+      })}
     </div>
   );
 }
