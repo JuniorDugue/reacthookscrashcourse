@@ -1,2 +1,0 @@
-# reacthookscrashcourse
-Created with CodeSandbox
